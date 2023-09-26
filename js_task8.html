@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js_task8.js"></script>
+    <style>
+      table,
+      th,
+      td,
+      tr {
+        border: 0;
+        border-collapse: collapse;
+      }
+      tr,
+      td {
+        padding-bottom: 10px;
+      }
+      td {
+        padding-left: 10px;
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      label {
+        text-align: end;
+      }
+      body {
+        height: 1000px;
+        background: linear-gradient(to bottom, #ffff66 0%, #ff33cc 100%);
+      }
+      .buttn {
+        background-color: red;
+        color: white;
+        width: 100px;
+        border-radius: 10px;
+        padding: 5px;
+        border: 2px solid black;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="color: blue; text-align: center">Registration Form</h2>
+    <form action="">
+      <table>
+        <tr id="normal">
+          <td style="text-align: end">First name</td>
+          <td style="width: 400px">
+            <input class="inp" style="width: 400px" type="text" />
+          </td>
+          <td style="color: red"><span>POOR</span></td>
+        </tr>
+        <tr id="normal">
+          <td style="text-align: end">Last name</td>
+          <td style="width: 400px">
+            <input class="inp" style="width: 400px" type="text" />
+          </td>
+          <td style="color: red"><span>POOR</span></td>
+        </tr>
+        <tr id="mail">
+          <td style="text-align: end">Email</td>
+          <td style="width: 400px">
+            <input class="inp" id="mail" style="width: 400px" type="email" />
+          </td>
+          <td id="mailsp" style="color: red"><span>POOR</span></td>
+        </tr>
+        <tr id="pass">
+          <td style="text-align: end">Password</td>
+          <td style="width: 400px">
+            <input class="inp" style="width: 400px" type="password" />
+          </td>
+          <td style="color: red"><span>POOR</span></td>
+        </tr>
+        <tr id="repass">
+          <td style="text-align: end">Re-enter Password</td>
+          <td style="width: 400px">
+            <input class="inp" style="width: 400px" type="password" />
+          </td>
+          <td style="color: red"><span>POOR OR MISMATCH</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: end">Gender</td>
+          <td>
+            <table>
+              <tr style="text-align: start">
+                <td style="width: 404px">
+                  <input type="radio" id="male" name="gender" />
+                  <label for="male">Male</label>
+                </td>
+              </tr>
+              <tr style="text-align: start">
+                <td>
+                  <input type="radio" id="female" name="gender" />
+                  <label for="female">Female</label>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr id="age">
+          <td style="text-align: end">Age</td>
+          <td>
+            <input
+              class="inp"
+              style="width: 400px"
+              type="number"
+              min="1"
+              max="100"
+            />
+          </td>
+          <td style="color: red"><span>POOR</span></td>
+        </tr>
+        <tr id="num">
+          <td style="text-align: end">Phone Number</td>
+          <td><input class="inp" style="width: 400px" type="text" /></td>
+          <td style="color: red"><span>POOR</span></td>
+        </tr>
+        <tr id="addr" style="height: 70px">
+          <td style="text-align: end">Address</td>
+          <td>
+            <textarea
+              class="inp"
+              name=""
+              id=""
+              style="width: 400px"
+              rows="7"
+            ></textarea>
+          </td>
+          <td style="color: red"><span>POOR</span></td>
+        </tr>
+        <tr id="normal">
+          <td style="text-align: end">State</td>
+          <td><input class="inp" style="width: 400px" type="text" /></td>
+          <td style="color: red"><span>POOR</span></td>
+        </tr>
+
+        <tr>
+          <td style="text-align: end">Country</td>
+          <td>
+            <select name="country" id="country">
+              <option>Select Country</option>
+              <option value="india">India</option>
+              <option value="india">Singapore</option>
+              <option value="india">China</option>
+              <option value="india">USA</option>
+              <option value="india">Russia</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: end">Languages Known</td>
+          <td>
+            <input type="checkbox" />
+            <label for="female">English</label>
+            <input type="checkbox" />
+            <label for="female">Kannada</label>
+            <input type="checkbox" />
+            <label for="female">Hindi</label>
+            <input type="checkbox" />
+            <label for="female">Telugu</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="checkbox" />
+            <label for="female"
+              >Hereby I declare all the given details are true</label
+            >
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: end">
+            Login to
+            <a href="https://ethnus.com/" target="_blank">Ethnus</a> website
+          </td>
+        </tr>
+      </table>
+      <div style="height: 5px"></div>
+      <input class="buttn" type="submit" value="Register" />
+    </form>
+  </body>
+</html>
+<!-- <script>
+      setInterval(myFunction, 1000);
+      function myFunction() {
+        const passField = document.querySelector("#mail");
+        passField.addEventListener("input", (e) => {
+          const emailInputValue = e.currentTarget.value;
+          if (
+            /^[a-zA-Z0-9._-]+ @[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(
+              emailInputValue
+            ) != true
+          ) {
+            document.querySelector("#mailsp").innerHTML = "POOR";
+            document.querySelector("#mailsp").style.color = "red";
+          } else {
+            document.querySelector("#mailsp").innerHTML = "GOOD";
+            document.querySelector("#mailsp").style.color = "green";
+          }
+        });
+
+        //     const nameField = document.querySelector("input");
+
+        //     nameField.addEventListener("input", () => {
+        //       nameField.setCustomValidity("");
+        //       nameField.checkValidity();
+        //       console.log(nameField.checkValidity());
+        //     });
+
+        //     nameField.addEventListener("invalid", () => {
+        //       document.getElementsByTagName("span")[0].innerHTML =
+        //         "This field is required";
+        //     });
+        for (let i = 0; i < 9; i++) {
+          if (i == 2) {
+            continue;
+          } else if (i == 4) {
+            var val = document.getElementsByClassName("inp")[i].value;
+            if (val == "") {
+              document.getElementsByTagName("span")[i].innerHTML =
+                "POOR OR MISMATCH";
+              document.getElementsByTagName("span")[i].style.color = "red";
+            } else if (
+              val !== document.getElementsByClassName("inp")[i - 1].value
+            ) {
+              document.getElementsByTagName("span")[i].innerHTML = "MISMATCH";
+              document.getElementsByTagName("span")[i].style.color = "red";
+            } else {
+              document.getElementsByTagName("span")[i].innerHTML = "MATCH";
+              document.getElementsByTagName("span")[i].style.color = "green";
+            }
+          } else {
+            var val = document.getElementsByClassName("inp")[i].value;
+            if (val == "" || val == undefined) {
+              document.getElementsByTagName("span")[i].innerHTML = "POOR";
+              document.getElementsByTagName("span")[i].style.color = "red";
+            } else {
+              document.getElementsByTagName("span")[i].innerHTML = "GOOD";
+              document.getElementsByTagName("span")[i].style.color = "green";
+            }
+          }
+        }
+
+        // var val = document.getElementsByTagName("textarea")[0].value;
+        // if (val == "") {
+        //   document.getElementsByTagName("span").innerHTML =
+        //     "This field is required";
+
+        //   document.getElementsByTagName("textarea")[0].style.borderColor =
+        //     "red";
+        //   document.getElementsByTagName("textarea")[0].style.borderWidth =
+        //     "3px";
+        // }
+      }
+    </script> -->

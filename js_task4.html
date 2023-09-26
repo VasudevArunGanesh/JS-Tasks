@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getDate() {
+        var date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day = date.getDate();
+        const monthNames = [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        var currentDate =
+          day.toString() + "/" + monthNames[month] + "/" + year.toString();
+        document.getElementById("date").innerHTML = currentDate;
+      }
+
+      function getTime() {
+        var time = new Date();
+        document.getElementById("time").innerHTML = time;
+      }
+    </script>
+    <form>
+      <input type="button" onClick="getDate()" value="Show Date" /><br />
+      <div id="date"></div>
+      <br />
+      <input type="button" onClick="getTime()" value="Show Time" /><br />
+      <div id="time"></div>
+    </form>
+  </body>
+</html>

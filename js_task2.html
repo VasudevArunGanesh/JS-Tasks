@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>letters in alphabetical order</h1>
+    <p>&#40;open console&#41;</p>
+
+    <script>
+      function alpha(str) {
+        var arr = str.split("");
+        res = arr.sort().join("");
+        rws = res.replace(/\s+/g, "");
+        return rws;
+      }
+      let input = "hello world";
+      console.log("input: " + input);
+      console.log("output:" + alpha(input));
+    </script>
+  </body>
+</html>

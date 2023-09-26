@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: red;
+      }
+      .red-border {
+        border: 1px solid red;
+      }
+      .lbl {
+        width: 70px;
+        display: inline-block;
+        text-align: end;
+      }
+      input,
+      textarea {
+        margin: 10px;
+      }
+      .lbl2 {
+        width: 70px;
+        margin-top: 10px;
+        display: inline-block;
+        text-align: end;
+        vertical-align: top;
+      }
+      button {
+        margin-left: 85px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <script>
+        function myFunction() {
+          for (let i = 0; i < 3; i++) {
+            var val = document.getElementsByTagName("input")[i].value;
+            if (val == "") {
+              document.getElementsByTagName("span")[i].innerHTML =
+                "This field is required";
+
+              document.getElementsByTagName("input")[i].style.borderColor =
+                "red";
+              document.getElementsByTagName("input")[i].style.borderWidth =
+                "3px";
+            } else {
+              document.getElementsByTagName("span")[i].innerHTML = "";
+
+              document.getElementsByTagName("input")[i].style.borderColor =
+                "black";
+              document.getElementsByTagName("input")[i].style.borderWidth =
+                "1px";
+            }
+          }
+          var val = document.getElementsByTagName("textarea")[0].value;
+          if (val == "") {
+            document.getElementsByTagName("span")[3].innerHTML =
+              "This field is required";
+
+            document.getElementsByTagName("textarea")[0].style.borderColor =
+              "red";
+            document.getElementsByTagName("textarea")[0].style.borderWidth =
+              "3px";
+          } else {
+            document.getElementsByTagName("span")[3].innerHTML = "";
+
+            document.getElementsByTagName("textarea")[0].style.borderColor =
+              "black";
+            document.getElementsByTagName("textarea")[0].style.borderWidth =
+              "1px";
+          }
+        }
+      </script>
+      <label class="lbl">Name:</label>
+      <input id="id1" type="text" min="100" max="300" required />
+      <span id="demo-1"></span><br />
+      <label class="lbl">Email:</label>
+      <input id="id2" type="email" min="100" max="300" required />
+      <span id="demo-2"></span><br />
+      <label class="lbl">Website:</label>
+      <input id="id3" type="text" min="100" max="300" required />
+      <span id="demo-3"></span><br />
+      <label class="lbl2">Message:</label>
+      <textarea id="id4" rows="3" cols="20" type="text" required></textarea>
+      <span id="demo-4"></span>
+      <br />
+      <button onclick="myFunction()">Submit</button>
+    </form>
+  </body>
+</html>
