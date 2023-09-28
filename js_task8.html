@@ -57,35 +57,41 @@
         <tr id="normal">
           <td style="text-align: end">First name</td>
           <td style="width: 400px">
-            <input class="inp" style="width: 400px" type="text" />
+            <input class="inp" style="width: 400px" type="text" required />
           </td>
           <td style="color: red"><span>POOR</span></td>
         </tr>
         <tr id="normal">
           <td style="text-align: end">Last name</td>
           <td style="width: 400px">
-            <input class="inp" style="width: 400px" type="text" />
+            <input class="inp" style="width: 400px" type="text" required />
           </td>
           <td style="color: red"><span>POOR</span></td>
         </tr>
         <tr id="mail">
           <td style="text-align: end">Email</td>
           <td style="width: 400px">
-            <input class="inp" id="mail" style="width: 400px" type="email" />
+            <input
+              class="inp"
+              id="mail"
+              style="width: 400px"
+              type="email"
+              required
+            />
           </td>
           <td id="mailsp" style="color: red"><span>POOR</span></td>
         </tr>
         <tr id="pass">
           <td style="text-align: end">Password</td>
           <td style="width: 400px">
-            <input class="inp" style="width: 400px" type="password" />
+            <input class="inp" style="width: 400px" type="password" required />
           </td>
           <td style="color: red"><span>POOR</span></td>
         </tr>
         <tr id="repass">
           <td style="text-align: end">Re-enter Password</td>
           <td style="width: 400px">
-            <input class="inp" style="width: 400px" type="password" />
+            <input class="inp" style="width: 400px" type="password" required />
           </td>
           <td style="color: red"><span>POOR OR MISMATCH</span></td>
         </tr>
@@ -123,7 +129,7 @@
         </tr>
         <tr id="num">
           <td style="text-align: end">Phone Number</td>
-          <td><input class="inp" style="width: 400px" type="text" /></td>
+          <td><input class="inp" style="width: 400px" type="number" /></td>
           <td style="color: red"><span>POOR</span></td>
         </tr>
         <tr id="addr" style="height: 70px">
@@ -173,7 +179,7 @@
         </tr>
         <tr>
           <td colspan="2">
-            <input type="checkbox" />
+            <input type="checkbox" required />
             <label for="female"
               >Hereby I declare all the given details are true</label
             >
